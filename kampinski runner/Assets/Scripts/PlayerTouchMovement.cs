@@ -1,29 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class PlayerTouchMovement : MonoBehaviour
 {
     public float height;
     private Rigidbody2D rb;
     public float gravity_change;
     public bool onground = true;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Physics.gravity *= gravity_change;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnJump(InputAction.CallbackContext context)
     {
-        if (Input.GetKeyDown(KeyCode.Space) && onground)
+        if (context.performed && onground)
         {
-            rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
-            onground = false;
+            Jump();
         }
     }
+
+    private void Jump()
+    {
+        rb.AddForce(Vector2.up * height, ForceMode2D.Impulse);
+        onground = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
