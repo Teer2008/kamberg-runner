@@ -4,7 +4,7 @@ public class BewegungVonRechtsNachLinksMitRollen : MonoBehaviour
 {
     public float geschwindigkeit = 5f;
     public float minYPosition = 0f;
-    public float maxYPosition = 5f;
+    public float maxYPosition = 0f;
     public float rollGeschwindigkeit = 100f;
 
     private float zielXPosition;
