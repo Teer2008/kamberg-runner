@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 77701650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16, y: 0.4, z: 0.46}
+  m_LocalPosition: {x: 0.01, y: 0.4, z: 0.46}
   m_LocalScale: {x: 2.2552981, y: 2.2552981, z: 2.2552981}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5517,9 +5517,11 @@ GameObject:
   - component: {fileID: 1218883830}
   - component: {fileID: 1218883829}
   - component: {fileID: 1218883832}
+  - component: {fileID: 1218883833}
+  - component: {fileID: 1218883834}
   m_Layer: 0
   m_Name: Meteor
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5601,7 +5603,7 @@ Transform:
   m_GameObject: {fileID: 1218883827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.02, y: 0.97, z: 0}
+  m_LocalPosition: {x: 10.01, y: 0.97, z: 0}
   m_LocalScale: {x: 1.4642, y: 1.4233, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5622,6 +5624,53 @@ MonoBehaviour:
   objektPrefab: {fileID: 1218883827}
   spawnIntervall: 2
   anzahlSpawns: 10
+--- !u!58 &1218883833
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218883827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.12, y: -0.36}
+  serializedVersion: 2
+  m_Radius: 0.320782
+--- !u!114 &1218883834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218883827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f0902ad685b8144f98732fb8d2fbfb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1271669628
 GameObject:
   m_ObjectHideFlags: 0
